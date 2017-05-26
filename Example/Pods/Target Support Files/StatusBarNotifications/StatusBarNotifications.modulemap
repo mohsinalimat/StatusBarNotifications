@@ -1,0 +1,6 @@
+framework module StatusBarNotifications {
+  umbrella header "StatusBarNotifications-umbrella.h"
+
+  export *
+  module * { export * }
+}
