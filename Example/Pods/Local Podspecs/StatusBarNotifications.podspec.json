@@ -1,8 +1,8 @@
 {
   "name": "StatusBarNotifications",
   "version": "0.1.0",
-  "summary": "A short description of StatusBarNotifications.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Display notifications in iOS Status Bar.",
+  "description": "This Pod allow users to display notification message inside iOS Status Bar. You can customize background color, text color, text font and even size of it.",
   "homepage": "https://github.com/michaljach/StatusBarNotifications",
   "license": {
     "type": "MIT",
@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "StatusBarNotifications/Classes/**/*"
+  "source_files": "StatusBarNotifications/Classes/**/*",
+  "resource_bundles": {
+    "StatusBarNotifications": [
+      "StatusBarNotifications/**/*.xib"
+    ]
+  }
 }

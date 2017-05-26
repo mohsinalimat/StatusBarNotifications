@@ -30,7 +30,7 @@ SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  StatusBarNotifications: d369c4aead52d10db35e54f5c1da4062714fa9a4
+  StatusBarNotifications: fdf79fcd377d8c9fe1241dbab8005ef6b163b80d
 
 PODFILE CHECKSUM: 304b3555e2da357c362dede53a10ba71917e330c
 

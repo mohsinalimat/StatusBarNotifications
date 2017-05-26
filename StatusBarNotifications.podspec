@@ -32,9 +32,9 @@ This Pod allow users to display notification message inside iOS Status Bar. You 
 
   s.source_files = 'StatusBarNotifications/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'StatusBarNotifications' => ['StatusBarNotifications/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'StatusBarNotifications' => ['StatusBarNotifications/**/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

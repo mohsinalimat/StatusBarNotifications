@@ -7,18 +7,10 @@
 //
 
 import UIKit
+import StatusBarNotifications
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func notify1(_ sender: Any) {
+        StatusBarNotifications.show(withText: "Message sent!", animation: "slideFromLeft")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
-
