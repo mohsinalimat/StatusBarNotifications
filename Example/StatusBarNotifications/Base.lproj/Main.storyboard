@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,16 +22,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xi-Yt-GR9">
-                                <rect key="frame" x="164" y="176" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xi-Yt-GR9">
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
+                                <state key="normal" title="Fade"/>
                                 <connections>
-                                    <action selector="notify1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CEb-72-sgV"/>
+                                    <action selector="fade:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oVU-qt-NGc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-je-yK5">
+                                <rect key="frame" x="16" y="214" width="343" height="30"/>
+                                <state key="normal" title="Slide From Top"/>
+                                <connections>
+                                    <action selector="slideFromTop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Naa-WG-Obc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td1-nc-1jO">
+                                <rect key="frame" x="16" y="252" width="343" height="30"/>
+                                <state key="normal" title="Slide From Bottom"/>
+                                <connections>
+                                    <action selector="slideFromBottom:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sm3-qn-4Ls"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7L-2N-5B2">
+                                <rect key="frame" x="16" y="297" width="343" height="30"/>
+                                <state key="normal" title="Slide From Left"/>
+                                <connections>
+                                    <action selector="slideFromLeft:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f4T-Xx-COq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StatusBarNotifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-dy-AFb">
+                                <rect key="frame" x="16" y="147" width="343" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Td1-nc-1jO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0RV-kW-Vr9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Td1-nc-1jO" secondAttribute="trailing" id="3F1-8X-b2R"/>
+                            <constraint firstItem="w7L-2N-5B2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="5KT-of-evH"/>
+                            <constraint firstItem="5Xi-Yt-GR9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="CoL-po-XzZ"/>
+                            <constraint firstItem="Td1-nc-1jO" firstAttribute="top" secondItem="U3F-je-yK5" secondAttribute="bottom" constant="8" id="JLU-Go-orH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w7L-2N-5B2" secondAttribute="trailing" id="Juu-wE-q7Z"/>
+                            <constraint firstItem="U3F-je-yK5" firstAttribute="top" secondItem="5Xi-Yt-GR9" secondAttribute="bottom" constant="8" id="LmO-6W-bmP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Xi-Yt-GR9" secondAttribute="trailing" id="Xr4-RA-lFb"/>
+                            <constraint firstItem="5Xi-Yt-GR9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="156" id="YK3-SS-QNO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U3F-je-yK5" secondAttribute="trailing" id="Zu5-No-Tqk"/>
+                            <constraint firstItem="Qj0-dy-AFb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="127" id="cBb-dC-Gtv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qj0-dy-AFb" secondAttribute="trailing" id="ckC-eA-AJD"/>
+                            <constraint firstItem="Qj0-dy-AFb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hOM-79-hCu"/>
+                            <constraint firstItem="w7L-2N-5B2" firstAttribute="top" secondItem="Td1-nc-1jO" secondAttribute="bottom" constant="15" id="qVv-Ke-cAH"/>
+                            <constraint firstItem="U3F-je-yK5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="uOs-2g-HmH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

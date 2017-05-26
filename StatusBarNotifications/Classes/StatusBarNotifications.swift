@@ -8,25 +8,32 @@
 
 import UIKit
 
+public enum Animation {
+    case fade
+    case slideFromTop
+    case slideFromBottom
+    case slideFromLeft
+}
+
 public class StatusBarNotifications: NSObject {
-    public static func show(withText: String, animation: String) {
+    public static func show(withText: String, animation: Animation = .fade, backgroundColor: UIColor = .blue, textColor: UIColor = .white) {
         if let statusBar = UIApplication.shared.statusBarView {
             statusBar.clipsToBounds = true
             let notificationView = UIView(frame: statusBar.frame)
-            notificationView.backgroundColor = .blue
+            notificationView.backgroundColor = backgroundColor
             notificationView.clipsToBounds = true
             
             let label = UILabel()
             label.frame = CGRect(x: 0, y: 0, width: statusBar.frame.width, height: notificationView.frame.height)
             label.text = withText
-            label.textColor = .white
+            label.textColor = textColor
             label.textAlignment = .center
             label.font = UIFont.boldSystemFont(ofSize: 13.0)
             
             notificationView.addSubview(label)
             
             switch animation {
-            case "fade":
+            case .fade:
                 notificationView.alpha = 0
                 UIView.animate(withDuration: 0.3, animations: {
                     notificationView.alpha = 1.0
@@ -37,7 +44,7 @@ public class StatusBarNotifications: NSObject {
                         notificationView.removeFromSuperview()
                     })
                 })
-            case "slideFromTop":
+            case .slideFromTop:
                 notificationView.transform = CGAffineTransform(translationX: 0, y: -notificationView.frame.height)
                 UIView.animate(withDuration: 0.3, animations: {
                     notificationView.transform = CGAffineTransform(translationX: 0, y: 0)
@@ -46,7 +53,7 @@ public class StatusBarNotifications: NSObject {
                         notificationView.transform = CGAffineTransform(translationX: 0, y: -notificationView.frame.height)
                     }, completion: nil)
                 })
-            case "slideFromBottom":
+            case .slideFromBottom:
                 notificationView.transform = CGAffineTransform(translationX: 0, y: notificationView.frame.height)
                 UIView.animate(withDuration: 0.3, animations: {
                     notificationView.transform = CGAffineTransform(translationX: 0, y: 0)
@@ -57,7 +64,7 @@ public class StatusBarNotifications: NSObject {
                         notificationView.removeFromSuperview()
                     })
                 })
-            case "slideFromLeft":
+            case .slideFromLeft:
                 notificationView.transform = CGAffineTransform(translationX: -notificationView.frame.width, y: 0)
                 UIView.animate(withDuration: 0.3, animations: {
                     notificationView.transform = CGAffineTransform(translationX: 0, y: 0)

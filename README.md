@@ -7,9 +7,11 @@
 
 ## Example
 
+![StatusBarNotifications](http://i.imgur.com/lEKJbvC.gif)
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
 
 ## Installation
 
@@ -20,9 +22,20 @@ it, simply add the following line to your Podfile:
 pod "StatusBarNotifications"
 ```
 
+## Usage
+
+Firstly import StatusBarNotifications:
+```ruby
+import StatusBarNotifications
+```
+Then simply call show method anywhere You want:
+```ruby
+StatusBarNotifications.show(withText: "Hello from StatusBar!", animation: .slideFromTop)
+```
+
 ## Author
 
-michaljach, michal.jach@ig.com
+Michal Jach, michal@jach.me
 
 ## License
 

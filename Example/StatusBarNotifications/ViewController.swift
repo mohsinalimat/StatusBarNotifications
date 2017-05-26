@@ -10,7 +10,19 @@ import UIKit
 import StatusBarNotifications
 
 class ViewController: UIViewController {
-    @IBAction func notify1(_ sender: Any) {
-        StatusBarNotifications.show(withText: "Message sent!", animation: "slideFromLeft")
+    @IBAction func fade(_ sender: Any) {
+        StatusBarNotifications.show(withText: "Message sent!", animation: .fade)
+    }
+    
+    @IBAction func slideFromTop(_ sender: Any) {
+        StatusBarNotifications.show(withText: "Message sent!", animation: .slideFromTop)
+    }
+    
+    @IBAction func slideFromBottom(_ sender: Any) {
+        StatusBarNotifications.show(withText: "Message sent!", animation: .slideFromBottom)
+    }
+    
+    @IBAction func slideFromLeft(_ sender: Any) {
+        StatusBarNotifications.show(withText: "Message sent!", animation: .slideFromLeft)
     }
 }
