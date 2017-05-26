@@ -75,7 +75,6 @@ public class StatusBarNotifications: NSObject {
                         notificationView.removeFromSuperview()
                     })
                 })
-            default: break
             }
             
             statusBar.addSubview(notificationView)
